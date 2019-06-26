@@ -1,6 +1,6 @@
 <template>
   <div class="directory-list">
-    <div class="list-item" v-for="item in directory" :key="item">
+    <div class="list-item" v-for="item in list" :key="item">
       <h3>{{ item }}</h3>
       <router-link :to="{ name: 'portfolio', params: { hash: item }}">View Portfolio</router-link>
     </div>
@@ -8,13 +8,19 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'Directory',
 
   data() {
     return {
-      directory: ['0fba123'],
+      list: ['0fba123'],
     };
+  },
+
+  computed: {
+    ...mapGetters(['directory']),
   },
 };
 </script>
