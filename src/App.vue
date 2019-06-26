@@ -2,13 +2,30 @@
   <div id="app">
     <div id="nav">
       <router-link to="/">Directory</router-link> |
-      <router-link to="/portfolio">Portfolio</router-link>
+      <router-link :to="{ name: 'portfolio', params: { hash: defaultAddress }}">
+        Portfolio
+      </router-link>
     </div>
     <router-view/>
   </div>
 </template>
 
+<script>
+export default {
+  name: 'App',
+
+  data() {
+    return {
+      defaultAddress: '0x2342342',
+    };
+  },
+};
+</script>
+
 <style lang="scss">
+body {
+  background: #f9f9f9;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

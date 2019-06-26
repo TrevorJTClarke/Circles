@@ -43,30 +43,33 @@
 export default {
   name: 'HelloCard',
 
-  data () {
+  data() {
     return {
       hireMe: false,
       skillsTotal: 0,
       firstName: '-',
       tmpFirstName: '',
-      lastName: ''
-    }
+      lastName: '',
+    };
   },
 
   // methods: {
   //   async setFirstname() {
-  //     // NOTE: Send is used, since we are updating the stored state, which requires a transaction fee
+  //     // NOTE: Send is used, since we are updating the stored state,
+  //     which requires a transaction fee
   //     await Portfolio.methods.updateFirstname(this.tmpFirstName).send();
   //     Portfolio.methods.getFullname().call().then(res => {
   //       this.firstName = res._firstName
   //     });
   //   },
   //   setLastname() {
-  //     // NOTE: Another way of doing the same as First, however we just commit data to UI immediately instead of wait for blockchain.
+  //     // NOTE: Another way of doing the same as First,
+  //     however we just commit data to UI immediately instead of wait for blockchain.
   //     Portfolio.methods.updateLastname(this.lastName).send();
   //   },
   //   async incrementSkills() {
-  //     // NOTE: This shows all the logic living within the contract, UI must update based on contract data!
+  //     // NOTE: This shows all the logic living within the contract,
+  //     UI must update based on contract data!
   //     await Portfolio.methods.incrementSkills().send();
   //     // NOTE: Since im lazy, we just re-get all contract state :)
   //     this.getAllValues()
@@ -92,15 +95,15 @@ export default {
 
   // Load contrct data
   mounted() {
-    console.log('connecting...')
+    console.log('connecting...');
     // EmbarkJS.onReady(err => {
     //   if (err) console.log('err', err)
     //   console.log('Connected!')
     //   // NOTE: We're connected, lets get the contract current state
     //   this.getAllValues()
     // })
-  }
-}
+  },
+};
 </script>
 
 <style scoped>
