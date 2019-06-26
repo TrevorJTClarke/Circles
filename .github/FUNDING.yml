@@ -9,5 +9,4 @@ community_bridge: # Replace with a single Community Bridge project-name e.g., cl
 liberapay: # Replace with a single Liberapay username
 issuehunt: # Replace with a single IssueHunt username
 otechie: # Replace with a single Otechie username
-custom: # Replace with a single custom sponsorship URL
-gittron: https://gittron.me/bots/0xdb973efeff1c997011c28a5e9b5f06ac
+custom: https://gittron.me/bots/0xdb973efeff1c997011c28a5e9b5f06ac
